@@ -1,0 +1,57 @@
+body {
+    font-family:verdana,arial,sans-serif
+}
+.appBanner{
+    width: 99%;
+    height: 35px;
+    /*border: 1px solid black;*/
+    /*background-color: blue;*/
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+}
+.titleText{
+    font-family: Verdana, Tahoma;
+    font-size: 14px;
+    color: gray;
+    font-weight: bold;
+}
+.widePanel {
+    width: 100%
+}
+
+.appFrame{
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+}
+.cmdWinFrame{
+    border: 1px solid gray;
+    height: 100%;
+    width: 100%;
+}
+.suppFrame{
+    height: 100%;
+    width: 100%;
+}
+.innerPanel{
+    width: 100%;
+    border: 1px solid gray;
+}
+.eFrameClass{
+    border:0px none;
+    width:98%;
+    height:718px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+.editorClass{
+    width:100%;
+    height:680px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+.editorClass k {color:#7F0055;font-weight:bold;font-style:normal;}
+.editorClass f {color:#3F7F5F;font-weight:bold;} 
+.editorClass r {color:#2A00FF;font-weight:normal;} 
+.editorClass c {color:#787878;fond-weight:bold;} 
+.editorClass qs {color:green;fond-weight:bold;}

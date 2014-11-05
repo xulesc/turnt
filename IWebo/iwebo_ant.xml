@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="weboctave" default="compile" basedir=".">
+  <description> weboctave build file. </description>
+
+  <!-- set classpath -->
+  <path id="project.class.path">
+    <pathelement path="${java.class.path}/"/>
+    <pathelement path="lib/commons-logging-1.1.1.jar"/>
+    <pathelement path="src/"/>
+    <pathelement path="lib/gwt-user.jar"/>
+    <pathelement path="lib/gwt-dev-linux.jar"/>
+  </path>
+  <path id="project.GWT.class.path">
+    <pathelement path="${java.class.path}/"/>
+    <pathelement path="lib/commons-logging-1.1.1.jar"/>
+    <pathelement path="lib/gwt-user.jar"/>
+    <pathelement path="lib/gwt-dev-linux.jar"/>
+    <pathelement path="src/"/>
+    <pathelement path="bin/"/> 
+  </path>
+  <!-- set classpath -->
+
+  <target name="compile" description="Compile src to bin">
+    <mkdir dir="bin"/>
+    <javac srcdir="src" destdir="bin" includes="**" 
+                        debug="on" debuglevel="lines,vars,source" source="1.5">
+      <classpath refid="project.class.path"/>
+    </javac>
+  </target>
+
+  <target name="gwt_compile" description="Run GWT compiler" depends="compile">
+    <mkdir dir="www/com.as.iwebo.IWebo"/>
+    <java classname="com.google.gwt.dev.GWTCompiler" fork="true">
+        <classpath refid="project.GWT.class.path"/>
+        <arg value="-out"/>
+        <arg value="./www"/>
+	<!--<arg value="-style"/>
+	<arg value="PRETTY"/>-->
+        <arg value="com.as.iwebo.IWebo"/>
+    </java>
+  </target>
+  
+  <target name="default" description="Entry point from build.xml"
+	  depends="gwt_compile"/>
+          
+  <target name="prep_dep" description="Pre deploy war" depends="gwt_compile">
+      <mkdir dir="build/WEB-INF/classes"/>
+      <mkdir dir="build/WEB-INF/lib"/>
+      <mkdir dir="dist"/>
+      <copy todir="build/WEB-INF/classes">
+            <fileset dir="bin/" includes="**"/>
+      </copy>
+      <copy todir="build/WEB-INF/lib">
+            <fileset dir="lib/" includes="**"/>
+      </copy>
+      <copy todir="build">
+            <fileset dir="www/com.as.iwebo.IWebo" includes="**"/>
+      </copy>  
+      <copy tofile="build/WEB-INF/web.xml">
+            <file file="src/com/as/iwebo/web.xml"/>
+      </copy>
+  </target>
+  
+  <target name="package" depends="prep_dep" description="Generate project war">
+    <jar destfile="dist/IWebo.war">
+      <fileset dir="build">
+        <include name="**"/>
+      </fileset>
+    </jar>
+  </target>
+  
+  <target name="documentation">
+    <mkdir dir="docs"/>
+    <exec executable="doxygen">
+    </exec>
+  </target> 
+
+  <target name="clean">
+    <delete>
+      <fileset dir="bin" includes="**/*"/>
+      <fileset dir="dist" includes="**/*"/>
+      <fileset dir="www" includes="**/*"/>
+      <fileset dir="build" includes="**/*"/>
+    </delete>
+  </target>
+</project>

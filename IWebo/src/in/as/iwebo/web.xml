@@ -1,0 +1,11 @@
+<web-app>
+	<servlet>
+        	<servlet-name>RemoteSupport</servlet-name>
+		<servlet-class>com.as.iwebo.server.RemoteSupportImpl</servlet-class>
+        </servlet>
+        <servlet-mapping>
+		<servlet-name>RemoteSupport</servlet-name>
+		<url-pattern>/remoteSupport</url-pattern>
+        </servlet-mapping>
+</web-app>
+                                                
