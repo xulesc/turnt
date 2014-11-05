@@ -14,13 +14,13 @@ class TSA:
         ##
         self.TWEET_COUNT = 100
         ##
-        CONSUMER_KEY='GowqSkW2IuDr1QsZhHLMg1A1M'
+        CONSUMER_KEY=''
         CONSUMER_KEY=CONSUMER_KEY.encode('utf-8')
-        CONSUMER_SECRET='oXFDHarXsLUHFnFwl0OQ8XDXMDzKPNdsaqS8RnYB5kkIGWEtep'
+        CONSUMER_SECRET=''
         CONSUMER_KEY=CONSUMER_KEY.encode('utf-8')
-        ACCESS_TOKEN_KEY='2543125176-oKA26SP90cLRwjbjaS0Dj4xIBY1lWyi5nve66Rm'
+        ACCESS_TOKEN_KEY=''
         ACCESS_TOKEN_KEY=ACCESS_TOKEN_KEY.encode('utf-8')
-        ACCESS_TOKEN_SECRET='VpBHTXgDWLAwLU497ObMjKRPVECR6JvFVVHsr9uQUqw7j'
+        ACCESS_TOKEN_SECRET=''
         ACCESS_TOKEN_SECRET=ACCESS_TOKEN_SECRET.encode('utf-8')
         self.api = twitter.Api(consumer_key=CONSUMER_KEY, consumer_secret=CONSUMER_SECRET, access_token_key=ACCESS_TOKEN_KEY, access_token_secret=ACCESS_TOKEN_SECRET)
         ##
