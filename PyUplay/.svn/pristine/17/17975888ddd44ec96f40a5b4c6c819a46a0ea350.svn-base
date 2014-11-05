@@ -1,0 +1,29 @@
+<html>
+<body>
+  <!-- embed the player --!>
+  <div id="ytplayer"></div>
+
+  <!-- include YouTube library --!>
+  <script
+src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"/>
+<script>
+  <!-- numstarts tracks how many times video was started (including skips)
+-->
+  var numstarts = 0;
+  function onYouTubePlayerReady(playerId) {
+    ytplayer = document.getElementById("ytplayer");
+    <!-- ytplayer.addEventListener('onStateChange', 'stateChange'); -->
+  }
+  function embedYouTubePlayer(videoID, containerID, width, height) {
+    swfobject.embedSWF('http://www.youtube.com/e/' + videoID +
+'?enablejsapi=1&playerapiid=ytplayer&rel=0', containerID, width, height,
+'8', null, null, { allowScriptAccess: 'always' }, { id: containerID });
+  }
+
+  <!-- change video id below to your own -->
+  embedYouTubePlayer('nUoP0lMW1fw', 'ytplayer', 425, 356);
+</script>
+
+</body>
+</html>
+
