@@ -1,3 +1,5 @@
+## mostly copied from: http://norvig.com/spell-correct.html
+
 import sys, random
 import re, collections, time
 
