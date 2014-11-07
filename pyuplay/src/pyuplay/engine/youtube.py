@@ -22,7 +22,7 @@ class Engine:
     def __init__(self):
         self.DEF_DEV_KEY = 'AI39si78QjL3GbzQ-1B_37KRc2E6vdzF4MIugOJVib3OH83BsDZKz_5teF5rWq8HSeUaK65ogp8xFJzphH_vrgHRnOI2CkZrxw'
 
-    def login(self, email='anuj.sharma80@gmail.com', password='danzig#1', source='PyUPlay', dev_key=None):
+    def login(self, email='anuj.sharma80@gmail.com', password='#1', source='PyUPlay', dev_key=None):
         if dev_key == None:
             dev_key = self.DEF_DEV_KEY
       
