@@ -1,0 +1,3 @@
+[submodule "ris/PySynth"]
+	path = ris/PySynth
+	url = https://github.com/xulesc/PySynth.git
