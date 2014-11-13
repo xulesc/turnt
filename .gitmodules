@@ -1,3 +1,36 @@
 [submodule "ris/PySynth"]
 	path = ris/PySynth
 	url = https://github.com/xulesc/PySynth.git
+[submodule "algos"]
+	path = algos
+	url = https://github.com/xulesc/algos.git
+[submodule "iwebo"]
+	path = iwebo
+	url = https://github.com/xulesc/iwebo.git
+[submodule "ob"]
+	path = ob
+	url = https://github.com/xulesc/ob.git
+[submodule "pytsa"]
+	path = pytsa
+	url = https://github.com/xulesc/pytsa.git
+[submodule "pyuplay"]
+	path = pyuplay
+	url = https://github.com/xulesc/pyuplay.git
+[submodule "ris"]
+	path = ris
+	url = https://github.com/xulesc/ris.git
+[submodule "spellchecker"]
+	path = spellchecker
+	url = https://github.com/xulesc/spellchecker.git
+[submodule "sr"]
+	path = sr
+	url = https://github.com/xulesc/sr.git
+[submodule "veb"]
+	path = veb
+	url = https://github.com/xulesc/veb.git
+[submodule "scrapper"]
+	path = scrapper
+	url = https://github.com/xulesc/scrapper.git
+[submodule "rssviz"]
+	path = rssviz
+	url = https://github.com/xulesc/rssviz.git
