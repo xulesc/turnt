@@ -34,3 +34,6 @@
 [submodule "rssviz"]
 	path = rssviz
 	url = https://github.com/xulesc/rssviz.git
+[submodule "general"]
+	path = general
+	url = https://github.com/xulesc/general.git
